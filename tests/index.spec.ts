@@ -16,3 +16,11 @@ test("get started link", async ({ page }) => {
   // Expects page to have a heading with the name of Astro Docs.
   await expect(page.getByRole("heading", { name: "Astro Docs" })).toBeVisible();
 });
+
+test("home link", async ({ page }) => {
+  await page.goto("/");
+
+  // Expect the navigation home link to be visible
+  const nav = page.locator("nav");
+  await expect(nav.getByRole("link", { name: "Home" })).toBeVisible();
+});
