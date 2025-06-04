@@ -1,22 +1,39 @@
+---
+import "../assets/css/global.css";
+import "../assets/css/layout.css";
+import "../assets/css/button.css";
+
+import data from "../data/index.data.ts";
+
+import Header from "../components/Header.astro";
+import { Font } from "astro:assets";
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro Basics</title>
+    <Font cssVariable="--font-inter" preload />
+    <Font cssVariable="--font-inter-display" preload />
+  </head>
+  <body>
+    <Header settings={data} />
+
+    <main>
+      <slot />
+    </main>
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
 </style>
