@@ -1,9 +1,7 @@
 name: Playwright Testing and Render Deployment
 on:
   push:
-    branches: [main, master]
-  pull_request:
-    branches: [main, master]
+    branches: [main]
 jobs:
   test:
     timeout-minutes: 60
