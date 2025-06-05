@@ -1,5 +1,5 @@
 const data = {
-  carousel_component: "Quienes somos",
+  carousel_component: "Quiénes somos",
 };
 
 export default data;
