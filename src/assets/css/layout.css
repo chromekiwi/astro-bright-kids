@@ -2,8 +2,8 @@
 
 /* Containers */
 .bs-container {
-  inline-size: min(92vw, 90rem);
-  padding: 2rem 1rem;
+  inline-size: min(80vw, 85rem);
+  padding: 0 2rem;
   margin-inline: auto;
 }
 

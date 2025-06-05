@@ -2,6 +2,7 @@
 import "../assets/css/global.css";
 import "../assets/css/layout.css";
 import "../assets/css/button.css";
+import "../assets/css/typography.css";
 
 import data from "../data/index.data.ts";
 
@@ -24,7 +25,7 @@ import { Font } from "astro:assets";
   <body>
     <Header settings={data} />
 
-    <main>
+    <main id="main">
       <slot />
     </main>
 
@@ -36,7 +37,16 @@ import { Font } from "astro:assets";
   html,
   body {
     margin: 0;
+    padding: 1rem;
     width: 100%;
-    height: 100%;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1;
   }
 </style>

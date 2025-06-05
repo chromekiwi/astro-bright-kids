@@ -10,11 +10,11 @@ const { settings } = Astro.props;
 ---
 
 <footer
-  class="@container bs-container shadow-2xl rounded-4xl my-24 font-semibold text-bs-surface-0 [&_a]:hover:text-bs-foreground-light [&_a]:transition-color [&_a]:duration-150"
+  class="@container bs-container flex flex-col shadow-2xl my-6 rounded-4xl font-semibold"
   id="contact"
 >
   <!-- Wrapper -->
-  <div class="p-3 md:px-16 rounded-xl grid md:grid-cols-2 gap-8">
+  <div class="p-4 md:px-20 rounded-xl grid md:grid-cols-2 gap-4">
     <!-- Left col -->
     <div
       class="w-max flex flex-col gap-8 md:gap-0 justify-between text-bs-foreground-light"
@@ -39,7 +39,7 @@ const { settings } = Astro.props;
             .map((item: NavItem) => (
               <a
                 href={item.link}
-                class="hover:!text-bs-surface-3"
+                class="hover:text-[#80cb28]"
                 aria-label={item.title + " - Footer"}
               >
                 {item.title}
@@ -60,7 +60,7 @@ const { settings } = Astro.props;
                 link: string | URL | null | undefined;
                 title: unknown;
               }) => (
-                <a href={item.link} class="hover:!text-bs-surface-3">
+                <a href={item.link} class="hover:text-[#80cb28]">
                   {item.title}
                 </a>
               )
@@ -72,9 +72,9 @@ const { settings } = Astro.props;
 
   <!-- Colophon -->
   <aside class="bs-container">
-    <nav class="flex gap-4 justify-center pt-8 md:pt-10 text-xs">
+    <nav class="flex gap-4 justify-center my-6 pt-2 md:pt-1 text-xs">
       <!-- Copyright/Date -->
-      <a href="https://blackspike.com/" class="hover:!text-bs-surface-3"
+      <a href="https://blackspike.com/" class="hover:hover:text-[#80cb28]"
         >by blackspike.com</a
       >
 
