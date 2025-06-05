@@ -1,18 +1,18 @@
 const data = {
   title: "Astro Basics",
   cta: {
-    title: "Contact Us",
+    title: "Contáctanos",
     content:
-      "Share your data with us. We will get back to you as soon as possible.",
-    action: "Send",
+      "Comparte tus datos con nosotros. Nos pondremos en contacto contigo lo antes posible.",
+    action: "Enviar",
   },
   nav: [
     {
-      title: "Home",
+      title: "Inicio",
       link: "/",
     },
     {
-      title: "About Us",
+      title: "Nosotros",
       link: "/about",
     },
   ],
