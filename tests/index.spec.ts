@@ -4,17 +4,7 @@ test("has title", async ({ page }) => {
   await page.goto("/");
 
   // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Astro Basics/);
-});
-
-test("get started link", async ({ page }) => {
-  await page.goto("/");
-
-  // Click the get started link.
-  await page.getByRole("link", { name: "Read our docs" }).click();
-
-  // Expects page to have a heading with the name of Astro Docs.
-  await expect(page.getByRole("heading", { name: "Astro Docs" })).toBeVisible();
+  await expect(page).toHaveTitle(/Bright Kids/);
 });
 
 test("home link", async ({ page }) => {
@@ -22,5 +12,5 @@ test("home link", async ({ page }) => {
 
   // Expect the navigation home link to be visible
   const nav = page.locator("nav");
-  await expect(nav.getByRole("link", { name: "Home" })).toBeVisible();
+  await expect(nav.getByRole("link", { name: "Inicio" })).toBeVisible();
 });

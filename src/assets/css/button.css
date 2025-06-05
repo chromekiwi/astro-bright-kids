@@ -29,6 +29,6 @@
     before:duration-300
     before:ease-out
     hover:before:translate-x-0
-    hover:before:opacity-10
+    hover:before:opacity-20
     active:before:opacity-0;
 }
