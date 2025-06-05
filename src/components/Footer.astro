@@ -1,0 +1,85 @@
+---
+import Logo from "../assets/logo.svg";
+
+type NavItem = {
+  title: string;
+  link: string;
+};
+
+const { settings } = Astro.props;
+---
+
+<footer
+  class="@container bs-container shadow-2xl rounded-4xl my-24 font-semibold text-bs-surface-0 [&_a]:hover:text-bs-foreground-light [&_a]:transition-color [&_a]:duration-150"
+  id="contact"
+>
+  <!-- Wrapper -->
+  <div class="p-3 md:px-16 rounded-xl grid md:grid-cols-2 gap-8">
+    <!-- Left col -->
+    <div
+      class="w-max flex flex-col gap-8 md:gap-0 justify-between text-bs-foreground-light"
+    >
+      <!-- Logo -->
+      <a class="flex group" href="#top" aria-label="Back to top">
+        <Logo height="60" width="60" />
+      </a>
+    </div>
+
+    <!-- Right col -->
+    <div
+      class="flex gap-10 md:gap-2 lg:gap-20 md:justify-end [&_a]:block md:[&_a]:px-5 [&_a]:py-2"
+    >
+      <!-- Nav -->
+      <nav class="flex flex-col">
+        {
+          settings.nav
+            .sort((a: { title: string }, b: { title: any }) =>
+              a.title.localeCompare(b.title)
+            )
+            .map((item: NavItem) => (
+              <a
+                href={item.link}
+                class="hover:!text-bs-surface-3"
+                aria-label={item.title + " - Footer"}
+              >
+                {item.title}
+              </a>
+            ))
+        }
+      </nav>
+
+      <!-- Social links -->
+      <nav class="flex flex-col">
+        {
+          settings.social_media
+            .sort((a: { title: string }, b: { title: any }) =>
+              a.title.localeCompare(b.title)
+            )
+            .map(
+              (item: {
+                link: string | URL | null | undefined;
+                title: unknown;
+              }) => (
+                <a href={item.link} class="hover:!text-bs-surface-3">
+                  {item.title}
+                </a>
+              )
+            )
+        }
+      </nav>
+    </div>
+  </div>
+
+  <!-- Colophon -->
+  <aside class="bs-container">
+    <nav class="flex gap-4 justify-center pt-8 md:pt-10 text-xs">
+      <!-- Copyright/Date -->
+      <a href="https://blackspike.com/" class="hover:!text-bs-surface-3"
+        >by blackspike.com</a
+      >
+
+      <!-- Credits -->
+      <p>Bright Kids ®</p>
+    </nav>
+  </aside>
+</footer>

@@ -12,5 +12,15 @@ test("home link", async ({ page }) => {
 
   // Expect the navigation home link to be visible
   const nav = page.locator("nav");
-  await expect(nav.getByRole("link", { name: "Inicio" })).toBeVisible();
+  await expect(
+    nav.getByRole("link", { name: "Inicio - Header" })
+  ).toBeVisible();
+});
+
+test("instagram link", async ({ page }) => {
+  await page.goto("/");
+
+  // Expect the Instagram link to be visible
+  const nav = page.locator("nav");
+  await expect(nav.getByRole("link", { name: "Instagram" })).toBeVisible();
 });

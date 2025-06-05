@@ -6,6 +6,7 @@ import "../assets/css/button.css";
 import data from "../data/index.data.ts";
 
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import { Font } from "astro:assets";
 ---
 
@@ -26,6 +27,8 @@ import { Font } from "astro:assets";
     <main>
       <slot />
     </main>
+
+    <Footer settings={data} />
   </body>
 </html>
 
