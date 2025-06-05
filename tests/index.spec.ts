@@ -24,3 +24,11 @@ test("instagram link", async ({ page }) => {
   const nav = page.locator("nav");
   await expect(nav.getByRole("link", { name: "Instagram" })).toBeVisible();
 });
+
+test("image alt text", async ({ page }) => {
+  await page.goto("/");
+
+  // Expect the image to have alt text
+  const image = page.locator("img[alt]");
+  await expect(image).toHaveAttribute("alt", /welcome illustration/i);
+});
