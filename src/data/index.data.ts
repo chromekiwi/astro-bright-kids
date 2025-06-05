@@ -16,6 +16,20 @@ const data = {
       link: "/about",
     },
   ],
+  social_media: [
+    {
+      title: "Facebook",
+      link: "https://www.facebook.com",
+    },
+    {
+      title: "X",
+      link: "https://www.x.com",
+    },
+    {
+      title: "Instagram",
+      link: "https://www.instagram.com",
+    },
+  ],
 };
 
 export default data;
