@@ -48,14 +48,15 @@ test('carousel items', async ({ page }) => {
   }
 });
 
-test('quote section', async ({ page }) => {
+test('student section', async ({ page }) => {
   await page.goto('/');
 
-  // Expect the quote section to be visible
-  const quoteSection = page.locator('.quote-section');
-  await expect(quoteSection).toBeVisible();
+  // Expect at least one student section to be visible
+  await expect(page.locator('.student-section').first()).toBeVisible();
 
-  // Check if the quote content and cite are present
-  await expect(quoteSection.getByText(/conectar/i)).toBeVisible();
-  await expect(quoteSection.getByText(/Bright Kids/i)).toBeVisible();
+  // Check if each student name is present on the page
+  const students = ['Cynthia', 'Paula', 'Romina', 'Victoria', 'Diego', 'Alan'];
+  for (const student of students) {
+    await expect(page.getByText(student)).toBeVisible();
+  }
 });
