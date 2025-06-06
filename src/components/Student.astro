@@ -1,0 +1,29 @@
+---
+type Student = {
+  name: string;
+};
+
+const { title, students } = Astro.props;
+---
+
+<section class="anim-wrapper bs-container grid my-12">
+  <!-- Title -->
+  {title && <h2 class="bs-h2 text-center" set:html={title} />}
+
+  <div
+    class="bs-mt-md grid grid-cols-2 md:grid-cols-2 lg:grid-cols-6 place-content-center gap-4"
+  >
+    {
+      students.map((student: Student) => (
+        <div
+          class="student-section group bs-h3 py-10 px-5 rounded-xl flex place-content-center
+            bg-bs-foreground-dark/15 text-bs-surface-3
+            transition-all duration-300 ease-in-out
+            hover:scale-105 hover:bg-bs-surface-1 hover:text-white"
+        >
+          {student.name}
+        </div>
+      ))
+    }
+  </div>
+</section>
