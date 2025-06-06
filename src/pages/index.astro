@@ -4,7 +4,6 @@ import Carousel from '../components/Carousel.astro';
 import Layout from '../layouts/Layout.astro';
 import Quote from '../components/Quote.astro';
 import Student from '../components/Student.astro';
-import Video from '../components/Video.astro';
 
 import index from '../data/index.data.ts';
 import welcome from '../data/welcome.data.ts';
@@ -12,7 +11,6 @@ import component from '../data/component.data.ts';
 import carousel from '../data/carousel.data.ts';
 import quote from '../data/quote.data.ts';
 import student from '../data/student.data.ts';
-import video from '../data/video.data.ts';
 ---
 
 <Layout>
@@ -20,5 +18,4 @@ import video from '../data/video.data.ts';
   <Carousel title={component.carousel_component} slides={carousel} />
   <Quote content={quote.content} cite={quote.cite} />
   <Student title={student.title} students={student.students} />
-  <Video title={video.title} videos={video.videos} />
 </Layout>

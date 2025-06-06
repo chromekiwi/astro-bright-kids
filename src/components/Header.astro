@@ -31,7 +31,7 @@ const { settings } = Astro.props;
       {
         settings.nav.map((item: NavItem) => (
           <a
-            class="bs-btn !text-bs-surface-1 !bg-transparent before:translate-y-full hover:before:translate-y-0 hover:shadow-lg/5"
+            class="bs-btn !text-bs-surface-1 !h-fit !bg-transparent before:translate-y-full hover:before:translate-y-0 hover:shadow-lg/5"
             href={item.link}
             aria-label={item.title + ' - Header'}
           >

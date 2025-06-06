@@ -19,11 +19,11 @@ const data = {
   social_media: [
     {
       title: 'Instagram',
-      link: 'https://www.instagram.com/bright_kidsss?igsh=dTVxOTByaXdtOGI1',
+      link: 'https://www.instagram.com',
     },
     {
       title: 'TikTok',
-      link: 'https://www.tiktok.com/@bright.kids97?_t=ZS-8wxz5pbqDaM&_r=1',
+      link: 'https://www.tiktok.com',
     },
   ],
 };
