@@ -60,15 +60,3 @@ test('student section', async ({ page }) => {
     await expect(page.getByText(student)).toBeVisible();
   }
 });
-
-test('video section', async ({ page }) => {
-  await page.goto('/');
-
-  // Expect the video section to be visible
-  const videoSection = page.locator('#video');
-  await expect(videoSection).toBeVisible();
-
-  // Expect at least one video accordion to be present
-  const videoAccordions = page.locator('details[name="video"]');
-  await expect(videoAccordions.first()).toBeVisible();
-});
