@@ -5,6 +5,8 @@ import Layout from '../layouts/Layout.astro';
 import Quote from '../components/Quote.astro';
 import Student from '../components/Student.astro';
 
+import background from '../assets/background.svg';
+
 import index from '../data/index.data.ts';
 import welcome from '../data/welcome.data.ts';
 import component from '../data/component.data.ts';
@@ -14,6 +16,13 @@ import student from '../data/student.data.ts';
 ---
 
 <Layout>
+  <img
+    id="background"
+    src={background.src}
+    alt=""
+    fetchpriority="high"
+    class="absolute min-h-svh object-cover inset-0 bottom-auto -z-1 w-full h-auto opacity-50 mask-b-from-70%"
+  />
   <Welcome content={welcome} settings={index} />
   <Carousel title={component.carousel_component} slides={carousel} />
   <Quote content={quote.content} cite={quote.cite} />
