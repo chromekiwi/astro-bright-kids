@@ -1,5 +1,5 @@
 ---
-import Logo from "../assets/logo.svg";
+import Logo from '../assets/logo.svg';
 
 type NavItem = {
   title: string;
@@ -21,7 +21,7 @@ const { settings } = Astro.props;
     >
       <!-- Logo -->
       <a class="flex group" href="#top" aria-label="Back to top">
-        <Logo height="60" width="60" />
+        <Logo height="80" width="80" />
       </a>
     </div>
 
@@ -40,7 +40,7 @@ const { settings } = Astro.props;
               <a
                 href={item.link}
                 class="hover:text-[#80cb28]"
-                aria-label={item.title + " - Footer"}
+                aria-label={item.title + ' - Footer'}
               >
                 {item.title}
               </a>
@@ -79,7 +79,7 @@ const { settings } = Astro.props;
       >
 
       <!-- Credits -->
-      <p>Bright Kids ®</p>
+      <p>Bright Kids © 2025</p>
     </nav>
   </aside>
 </footer>
