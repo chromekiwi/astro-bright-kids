@@ -40,8 +40,8 @@ const { content, cite } = Astro.props;
 
   @supports (animation-timeline: view()) {
     .bs-st-quote strong {
-      animation: green-text linear;
-      animation-timeline: view(20% block);
+      animation: green-text 1s ease-in-out;
+      animation-timeline: view(10% block);
       animation-fill-mode: forwards;
     }
   }
