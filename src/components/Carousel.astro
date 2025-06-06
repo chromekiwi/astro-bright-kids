@@ -1,5 +1,6 @@
 ---
-import Arrow from "../assets/arrow.svg";
+import { Image } from 'astro:assets';
+import Arrow from '../assets/arrow.svg';
 
 type Slide = {
   title: string;
@@ -55,7 +56,7 @@ const { title, slides } = Astro.props;
           <div class="swiper-slide carousel-item bg-bs-surface-0 rounded-4xl overflow-hidden !h-auto">
             <figure class="flex flex-col gap-6 isolate min-h-[50svh] md:min-h-[40rem] h-full">
               {/* BG image */}
-              <img
+              <Image
                 src={item.image}
                 alt={item.image_alt}
                 loading="lazy"
@@ -96,28 +97,28 @@ const { title, slides } = Astro.props;
 </section>
 
 <script>
-  import Swiper from "swiper";
-  import "swiper/css";
+  import Swiper from 'swiper';
+  import 'swiper/css';
 
-  const prev_btn = document.querySelector(".js-fc-btn-prev");
-  const next_btn = document.querySelector(".js-fc-btn-next");
+  const prev_btn = document.querySelector('.js-fc-btn-prev');
+  const next_btn = document.querySelector('.js-fc-btn-next');
 
-  const swiper = new Swiper(".js-fc-swiper", {
+  const swiper = new Swiper('.js-fc-swiper', {
     slidesPerView: 1.05,
     spaceBetween: 8,
     speed: 500,
     loop: true,
     centeredSlides: true,
     breakpoints: {
-      "640": {
+      '640': {
         slidesPerView: 1.2,
         spaceBetween: 32,
       },
-      "1600": {
+      '1600': {
         slidesPerView: 1.4,
         spaceBetween: 64,
       },
-      "1900": {
+      '1900': {
         slidesPerView: 1.6,
         spaceBetween: 64,
       },
@@ -126,10 +127,10 @@ const { title, slides } = Astro.props;
 
   // Add event listeners to buttons
   if (prev_btn) {
-    prev_btn.addEventListener("click", () => swiper.slidePrev());
+    prev_btn.addEventListener('click', () => swiper.slidePrev());
   }
   if (next_btn) {
-    next_btn.addEventListener("click", () => swiper.slideNext());
+    next_btn.addEventListener('click', () => swiper.slideNext());
   }
 
   // Trigger swiper
