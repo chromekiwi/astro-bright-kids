@@ -1,5 +1,5 @@
 ---
-import Logo from "../assets/logo.svg";
+import Logo from '../assets/logo.svg';
 
 type NavItem = {
   title: string;
@@ -16,12 +16,12 @@ const { settings } = Astro.props;
     <a
       class="flex xl:min-w-32 group"
       href="/"
-      aria-label={settings.title + " - Logo"}
+      aria-label={settings.title + ' - Logo'}
     >
       <Logo
         class="group-hover:-rotate-180 group-hover:scale-80 transition-transform ease-bs-spring duration-1000"
-        height="60"
-        width="60"
+        height="80"
+        width="80"
       />
     </a>
 
@@ -33,7 +33,7 @@ const { settings } = Astro.props;
           <a
             class="bs-btn !text-bs-surface-1 !bg-transparent before:translate-y-full hover:before:translate-y-0 hover:shadow-lg/5"
             href={item.link}
-            aria-label={item.title + " - Header"}
+            aria-label={item.title + ' - Header'}
           >
             {item.title}
           </a>
