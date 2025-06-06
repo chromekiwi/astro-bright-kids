@@ -13,7 +13,7 @@ const data = {
     },
     {
       title: 'Nosotros',
-      link: '/about',
+      link: '/',
     },
   ],
   social_media: [
